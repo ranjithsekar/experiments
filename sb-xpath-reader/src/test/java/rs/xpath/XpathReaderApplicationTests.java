@@ -1,10 +1,10 @@
-package rj.xpath;
+package rs.xpath;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SbXpathReaderApplicationTests {
+class XpathReaderApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -24,7 +24,7 @@ $(document).on('click','*', function() {
     return false;
 });
 
-var $iframe = $('iframe');
+var $iframe = $('myframe');
 $iframe.load(function(){       
     var $iframeBody = $iframe.contents().find('body'); 
 

@@ -6,11 +6,16 @@
 <title>Login</title>
 </head>
 <body>
+<div>
   <label id="firstname">First Name</label>
+  <div><span>
   <input type="text" id="firstname" name="firstname" />
+  </span></div>
   <br>
   <br>
   <label id="firstname">Last Name</label>
-  <input type="text" id="lastname" name="lastname" />
+  <h5><input type="text" id="lastname" name="lastname" /></h5>
+</div>
 </body>
+
 </html>

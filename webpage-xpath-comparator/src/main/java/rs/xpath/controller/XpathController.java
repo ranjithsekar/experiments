@@ -1,10 +1,17 @@
 package rs.xpath.controller;
 
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
+
+import javax.swing.plaf.ListUI;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -39,29 +46,29 @@ public class XpathController {
     log.info("Url 2: " + url2);
     System.out.println("element: " + element);
 
-    String src1 = Jsoup.connect(url1)
-        .get()
-        .html();
+    String src1 = Jsoup.connect(url1).get().html();
 
     Document document1 = Jsoup.parse(src1);
-    List<String> result1 = Xsoup.compile("//" + element)
-        .evaluate(document1)
-        .list();
+    List<Element> result1 = Xsoup.compile("//" + element).evaluate(document1).getElements();
+
+    List<String> xpaths1 = result1.stream().map(e -> {
+      System.out.println(e);
+      List<String> tagNames = e.parents().stream().map(f -> f.tagName()).collect(Collectors.toList());
+      Collections.reverse(tagNames);
+      return String.join("/", tagNames);
+    }).collect(Collectors.toList());
 
     model.put("url1EleSize", result1.size());
-    model.put("result1", result1);
+    model.put("result1", xpaths1);
 
-    String src2 = Jsoup.connect(url2)
-        .get()
-        .html();
+    String src2 = Jsoup.connect(url2).get().html();
 
     Document document2 = Jsoup.parse(src2);
-    List<String> result2 = Xsoup.compile("//" + element)
-        .evaluate(document2)
-        .list();
+    List<Element> result2 = Xsoup.compile("//" + element).evaluate(document2).getElements();
+    List<String> result2Str = result2.stream().map(e -> e.outerHtml()).collect(Collectors.toList());
 
     model.put("url2EleSize", result2.size());
-    model.put("result2", result2);
+    model.put("result2", result2Str);
     return "home";
   }
 }

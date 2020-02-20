@@ -31,13 +31,13 @@
       <td>No. of Elements in URL 1: ${url1EleSize}</td>
     </tr>
     <tr>
-      <td>${result1}</td>
+      <td><xmp>${result1}</xmp></td>
     </tr>
     <tr>
       <td>No. of Elements in URL 2: ${url2EleSize}</td>
     </tr>
     <tr>
-      <td>${result2}</td>
+      <td><xmp>${result2}</xmp></td>
     </tr>
   </table>
 </body>

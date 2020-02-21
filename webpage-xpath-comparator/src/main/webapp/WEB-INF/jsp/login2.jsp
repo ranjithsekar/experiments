@@ -6,11 +6,11 @@
 <title>Login</title>
 </head>
 <body>
-  <label id="firstname">First Name</label>
+  <label id="firstname2">First Name</label>
   <input type="text" id="firstname2" name="firstname2" />
   <br>
   <br>
-  <label id="firstname">Last Name</label>
-  <input type="text" id="lastname" name="lastname" />
+  <label id="lastname2">Last Name</label>
+  <input type="text" id="lastname2" name="lastname2" />
 </body>
 </html>

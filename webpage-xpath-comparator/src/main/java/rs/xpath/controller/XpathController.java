@@ -1,13 +1,10 @@
 package rs.xpath.controller;
 
-import java.util.Collection;
+import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-
-import javax.swing.plaf.ListUI;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -18,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import lombok.extern.slf4j.Slf4j;
+import rs.xpath.model.XPathResult;
 import us.codecraft.xsoup.Xsoup;
 
 @Controller
@@ -44,31 +42,35 @@ public class XpathController {
       @RequestParam("url2") String url2, Map<String, Object> model) throws Exception {
     log.info("Url 1: " + url1);
     log.info("Url 2: " + url2);
-    System.out.println("element: " + element);
 
+    // PAGE 1
     String src1 = Jsoup.connect(url1).get().html();
-
     Document document1 = Jsoup.parse(src1);
-    List<Element> result1 = Xsoup.compile("//" + element).evaluate(document1).getElements();
+    List<Element> elements1 = Xsoup.compile("//" + element).evaluate(document1).getElements();
 
-    List<String> xpaths1 = result1.stream().map(e -> {
-      System.out.println(e);
+    List<XPathResult> result1 = new ArrayList<>();
+    elements1.forEach(e -> {
       List<String> tagNames = e.parents().stream().map(f -> f.tagName()).collect(Collectors.toList());
       Collections.reverse(tagNames);
-      return String.join("/", tagNames);
-    }).collect(Collectors.toList());
+      result1.add(new XPathResult(e, String.join("/", tagNames) + "/" + e.tagName()));
+    });
 
-    model.put("url1EleSize", result1.size());
-    model.put("result1", xpaths1);
+    model.put("url1EleSize", elements1.size());
+    model.put("result1", result1);
 
+    // PAGE 2
     String src2 = Jsoup.connect(url2).get().html();
-
     Document document2 = Jsoup.parse(src2);
-    List<Element> result2 = Xsoup.compile("//" + element).evaluate(document2).getElements();
-    List<String> result2Str = result2.stream().map(e -> e.outerHtml()).collect(Collectors.toList());
+    List<Element> elements2 = Xsoup.compile("//" + element).evaluate(document2).getElements();
+    List<XPathResult> result2 = new ArrayList<>();
+    elements2.forEach(e -> {
+      List<String> tagNames = e.parents().stream().map(f -> f.tagName()).collect(Collectors.toList());
+      Collections.reverse(tagNames);
+      result2.add(new XPathResult(e, String.join("/", tagNames) + "/" + e.tagName()));
+    });
 
-    model.put("url2EleSize", result2.size());
-    model.put("result2", result2Str);
+    model.put("url2EleSize", elements2.size());
+    model.put("result2", result2);
     return "home";
   }
 }

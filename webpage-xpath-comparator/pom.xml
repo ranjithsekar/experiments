@@ -13,6 +13,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>webpage-xpath-comparator</name>
   <description>Web Page Xpath Comparator</description>
+  <packaging>war</packaging>
 
   <properties>
     <java.version>1.8</java.version>

@@ -1,0 +1,29 @@
+<abstracts tsip:action="new">
+					<abstractTsxm tsip:lang="en" tsip:input="original">
+						<tsxm:p tsxm:num="0000" tsxm:align="left">
+							One or more esters selected among an ester of a C
+							<tsxm:sub>2-10 </tsxm:sub>
+							fatty acid with a polyhydric alcohol, an ester of a monobasic
+							hydroxy acid with a mono-or polyhydric alcohol, and an ester of a
+							polybasic acid with a mono-or polyhydric alcohol are incorporated
+							into a cosmetic hair preparation comprising a crystalline
+							compound and a solvent in which the compound dissolves. Due to
+							this, the crystalline compound is inhibited from
+							crystallizing/precipitating at low temperatures and the
+							preparation can give an improved use feeling during use.
+						</tsxm:p>
+					</abstractTsxm>
+					<abstractTsxm tsip:lang="en" tsip:src="docdb">
+						<tsxm:p>One or more esters selected among an ester of a
+							C&lt;SUB&gt;2-10 &lt;/SUB&gt;fatty acid with a polyhydric
+							alcohol, an ester of a monobasic hydroxy acid with a mono- or
+							polyhydric alcohol, and an ester of a polybasic acid with a mono-
+							or polyhydric alcohol are incorporated into a cosmetic hair
+							preparation comprising a crystalline compound and a solvent in
+							which the compound dissolves. Due to this, the crystalline
+							compound is inhibited from crystallizing/precipitating at low
+							temperatures and the preparation can give an improved use feeling
+							during use.</tsxm:p>
+					</abstractTsxm>
+				</abstracts>
+				<?xml version="1.0" encoding="UTF-8"?>

@@ -1,0 +1,8 @@
+<emp>
+	<name>
+		<test:a src="orig">ranjith</test:a>
+	</name>
+	<name>
+		<test:b src="docdb">Sekar</test:b>
+	</name>
+</emp>

@@ -1,0 +1,38 @@
+<tsip xmlns:tsip="http://schemas.thomson.com/ts/20041221/tsip"
+	xmlns:dwpi="http://schemas.thomson.com/ts/20041221/dwpi" xmlns:wila="http://schemas.thomson.com/ts/20041221/wila"
+	xmlns:tsxm="http://schemas.thomson.com/ts/20041221/tsxm" xmlns:mml="http://www.w3.org/1998/Math/MathML"
+	xmlns:cals="http://CALS-URI" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	tsip:dtdVersion="25" tsip:date="2015-08-19">
+	<tsip tsip:date="2015-08-19" tsip:dtdVersion="25">
+		<memberPatents>
+			<patent tsip:action="new" tsip:cc="US" tsip:se="20130259541"
+				tsip:ki="A1">
+				<abstracts tsip:action="new">
+					<abstractTsxm tsip:lang="fr" tsip:input="original">
+						<tsxm:p>Dans le proc temps,</tsxm:p>
+					</abstractTsxm>
+					<abstractTsxm tsip:lang="de" tsip:input="original">
+						<tsxm:p tsxm:id="pa01" tsxm:num="0001">Die Erfindung betrifft
+							Beleuchtungssystem (1) umfassend eine Mehrzahl von ein
+							Niedriglichtzu stand erfasst ist. Die Erfindung betrifft ferner
+							ein Verfahren zum Betrieb eines derartigen Beleuchtungssystems.
+						</tsxm:p>
+					</abstractTsxm>
+					<abstractTsxm tsip:lang="en" tsip:input="original">
+						<tsxm:p tsxm:id="p-0001" tsxm:num="0000">An image forming
+							apparatus and an image forming method are provided that realize
+							both the use of a decolorizing toner and a non-decolorizing toner
+							and miniaturization of the apparatus.
+						</tsxm:p>
+					</abstractTsxm>
+					<abstractTsxm tsip:lang="en" tsip:src="docdb">
+						<tsxm:p>An image forming apparatus and an image forming method are
+							provided that realize both the use of a decolorizing toner and a
+							non-decolorizing toner and miniaturization of the apparatus.
+						</tsxm:p>
+					</abstractTsxm>
+				</abstracts>
+			</patent>
+		</memberPatents>
+	</tsip>
+</tsip>

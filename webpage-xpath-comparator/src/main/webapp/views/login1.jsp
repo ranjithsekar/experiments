@@ -12,7 +12,7 @@
       <span> <input type="text" id="firstname1" name="firstname1" />
       </span>
     </div>
-    <br> <br> <label id="firstname1">Last Name1</label>
+    <br> <br> <label id="lastname1">Last Name1</label>
     <h5>
       <input type="text" id="lastname1" name="lastname1" />
     </h5>

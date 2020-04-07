@@ -47,6 +47,14 @@ public class StreamMap {
     System.out.println(modified);
 
   }
+  
+  public static void exp3() {
+    String val = "firstname=ranjith,lastname=sekar";
+    Map<Object, Object> str = Arrays.asList(val.split(",")).stream().map(e -> e.split("="))
+        .collect(Collectors.toMap(arr -> arr[0], arr -> arr[1], (k, v) -> k));
+    System.out.println();
+
+  }
 }
 
 class Fruit {
